@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rectangle</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/rectangle.css" />
+
+</head>
+
+<body>
+
+
+    <main>
+        <h1 id="pageTitle">Rectangles!</h1>
+        <section>
+            <a href="/rectangleTable">Click Here to See All Rectangles</a>
+            <br>
+            <h2 class="sectionTitle">List of Rectangles Owned By:
+                <%= owner %>
+            </h2>
+            <table class="rectangleTable">
+                <tr>
+                    <td class="tableHead">Name</td>
+                    <td class="tableHead">Colour</td>
+                    <td class="tableHead">ID</td>
+                    <td class="tableHead">Border</td>
+                    <td class="tableHead">Owner</td>
+                    <td class="tableHead"></td>
+                </tr>
+                <% data.results.forEach(function(r) { %>
+                    <form action="/deleteItem/<%= r.id %>" method="post">
+                        <tr>
+                            <td class="tableItem">
+                                <a href="/rectangle/<%= r.id%>">
+                                    <%= r.name %>
+                                </a>
+                            </td>
+                            <td class="tableItem">
+                                <%= r.color %>
+                            </td>
+                            <td class="tableItem">
+                                <%= r.id %>
+                            </td>
+                            <td class="tableItem">
+                                <%= r.bordercolor %>
+                            </td>
+                            <td class="tableItem">
+                                <a href="/rectangleTable/<%= r.owner %>">
+                                    <%= r.owner %>
+                                </a>
+                            </td>
+                            <td class="tableItem">
+                                <button type="submit" class="deleteButton">Delete</button>
+                            </td>
+                        </tr>
+                    </form>
+                    <% }); %>
+            </table>
+            <br>
+            <br>
+            <form action="/addItem" method="post" class="addItemForm">
+                <h3 class="formTitle">Add a Rectangle</h3>
+                <fieldset>
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" name="name" required>
+                    <br>
+                    <label for="color">Color:</label>
+                    <br>
+                    <input type="color" name="color" required>
+                    <br>
+                    <label for="width">Width:</label>
+                    <br>
+                    <input type="number" name="width" required>
+                    <br>
+                    <label for="height">Height:</label>
+                    <br>
+                    <input type="number" name="height" required>
+                    <br>
+                    <label for="id">ID:</label>
+                    <br>
+                    <input type="number" name="id" required>
+                    <br>
+                    <label for="bordercolor">Border Color:</label>
+                    <br>
+                    <input type="color" name="bordercolor" required>
+                    <br>
+                    <% if(owner == 'All'){ %>
+                        <label for="owner">Owner:</label>
+                        <br>
+                        <input type="text" name="owner" required>
+                        <br>
+                        <% } else{  %>
+                            <input type="text" name="owner" value="<%= owner %>" hidden>
+                            <% } %>
+                                <label for="gradient">Gradient*:</label>
+                                <br>
+                                <input type="radio" name="gradient" value="True" checked>
+                                <label>Yes</label>
+                                <input type="radio" name="gradient" value="False">
+                                <label>No</label>
+                                <br>
+                                <button class="addButton" type="submit">Enter</button>
+                                <br>
+                                <label>*Gradient Automatically Set to Border Color</label>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

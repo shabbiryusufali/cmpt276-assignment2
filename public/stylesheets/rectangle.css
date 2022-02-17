@@ -1,0 +1,199 @@
+body {
+    margin: 0%;
+    background-color: rgb(18, 55, 56);
+}
+
+main {
+    background-color: rgb(18, 55, 56);
+}
+
+h1 {
+    font-size: 2.25em;
+}
+
+.tableHead,
+.tableItem {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.rectangleTable tr:last-child>td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+.dataTable tr:last-child>td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.rectangleTable tr:first-child>td:first-child {
+    border-top-left-radius: 5px;
+}
+
+.dataTable tr:first-child>td:last-child {
+    border-top-right-radius: 5px;
+}
+
+.dataTable tr:last-child>td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+.rectangleTable tr:last-child>td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.dataTable tr:first-child>td:first-child {
+    border-top-left-radius: 5px;
+}
+
+.rectangleTable tr:first-child>td:last-child {
+    border-top-right-radius: 5px;
+}
+
+section {
+    width: 85%;
+    padding: 2% 5%;
+    margin: auto;
+    background-color: aliceblue;
+    height: max-content;
+    border-radius: 5px;
+}
+
+.rectangleTable {
+    min-width: fit-content;
+    width: 60%;
+}
+
+.dataTable {
+    min-width: fit-content;
+    width: 30%;
+}
+
+.tableHead {
+    background-color: rgb(18, 55, 56);
+    color: aliceblue;
+    text-align: center;
+}
+
+.tableItem {
+    background-color: cadetblue;
+    color: black;
+    text-align: center;
+}
+
+#pageTitle {
+    color: cadetblue;
+    margin-left: 3.25%;
+}
+
+.sectionTitle {
+    color: rgb(18, 55, 56);
+}
+
+.addItemForm {
+    width: 50%;
+    text-align: left;
+    background-color: cadetblue;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.updateItemForm {
+    width: 50%;
+    text-align: left;
+    background-color: cadetblue;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .updateItemForm {
+        width: 90%;
+        margin: auto;
+    }
+    .addItemForm {
+        margin: auto;
+        width: 90%;
+    }
+    .rectangleTable {
+        margin: auto;
+        width: 90%;
+        padding: 0px;
+    }
+    .dataTable {
+        margin: auto;
+        padding: 0px;
+        width: 90%;
+    }
+    section {
+        padding: 5% 5%;
+    }
+}
+
+.addButton {
+    border-radius: 5px;
+    min-width: fit-content;
+    width: auto;
+    min-height: fit-content;
+    height: auto;
+    font-size: 2em;
+    background-color: rgb(18, 55, 56);
+    color: aliceblue;
+}
+
+.updateButton {
+    border-radius: 5px;
+    min-width: fit-content;
+    width: auto;
+    min-height: fit-content;
+    height: auto;
+    font-size: 2em;
+    background-color: rgb(18, 55, 56);
+    color: aliceblue;
+}
+
+.deleteButton {
+    border-radius: 5px;
+    min-width: fit-content;
+    width: auto;
+    min-height: fit-content;
+    height: auto;
+    font-size: 1.25em;
+    background-color: rgb(18, 55, 56);
+    color: aliceblue;
+}
+
+.formTitle {
+    color: rgb(18, 55, 56);
+    font-size: 1.5em;
+}
+
+.addItemForm fieldset {
+    border: none;
+}
+
+.addItemForm label {
+    color: rgb(18, 55, 56);
+    font-size: 1.25em;
+}
+
+.updateItemForm fieldset {
+    border: none;
+}
+
+.updateItemForm label {
+    color: rgb(18, 55, 56);
+    font-size: 1.25em;
+}
+
+a:visited {
+    color: rgb(18, 55, 56);
+}
+
+a {
+    color: rgb(18, 55, 56);
+}
+
+a:hover {
+    color: blue;
+}

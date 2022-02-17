@@ -1,0 +1,134 @@
+<!--
+Author: Shabbir Yusufali
+Date: January 30, 2021
+Description: This document contains the HTML for the calculator. It tries to copy the
+design of the original calculator based on the given image
+Citations:
+- Nothing referenced outside of provided resources
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Coursys Calculator</title>
+    <link rel="stylesheet" href="stylesheets/calculator.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <br>
+            <br>
+        </header>
+        <br>
+        <h1>Grade Calculator</h1>
+        <section id="mainContent">
+            <h2>Activities</h2>
+            <p>Give grades to the numeric activities:</p>
+            <form method="post">
+                <table id="calculatorDesign">
+                    <thead>
+                        <tr id="topRowTable">
+                            <th>Name</th>
+                            <th>Short Name</th>
+                            <th>Weight</th>
+                            <th>Grade</th>
+                            <th>Percent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calculatorFields">
+                        <tr>
+                            <td>
+                                <label>Activity 1</label>
+                            </td>
+                            <td>
+                                <label>A1</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Activity 2</label>
+                            </td>
+                            <td>
+                                <label>A2</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Activity 3</label>
+                            </td>
+                            <td>
+                                <label>A3</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Activity 4</label>
+                            </td>
+                            <td>
+                                <label>A4</label>
+                            </td>
+                            <td>
+                                <input type="number" name="weight">
+                            </td>
+                            <td>
+                                <input type="number" name="score">/
+                                <input type="number" name="total">
+                            </td>
+                            <td>
+                                <p></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <button id="addActivity">ADD ACTIVITY</button>
+            <h3 id="resultHeader">Result</h3>
+            <p id="result"></p>
+            <div id="buttonRight">
+                <button id="weightedAverage">WEIGHTED</button>
+                <button id="mean">MEAN</button>
+            </div>
+        </section>
+        <footer>
+            <br>
+            <br>
+        </footer>
+    </main>
+
+    <script src="calculator.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rectangle</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/rectangle.css">
+</head>
+
+<body>
+
+
+    <main>
+        <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
+
+        <% results.forEach(function(r) { %>
+
+            <h1 id="pageTitle">Rectangle:
+                <%=r.name %>
+            </h1>
+            <section>
+                <a href="/rectangleTable">Click Here to See All Rectangles</a>
+                <br>
+                <br>
+                <div style="background-color:<%= r.color %>; border: 1px solid <%= r.bordercolor%>;text-align:center;width:<%= r.width%>px;height:<%=r.height%>px; 
+                <% if(r.gradient == true){ %>
+                    background-image:linear-gradient(to right, <%=r.color%> , <%=r.bordercolor%>);
+                 <%   }else{} %>
+                 ">
+                </div>
+
+                <h2 class="sectionTitle">Rectangle Data</h2>
+                <table class="dataTable">
+                    <tr>
+                        <td class="tableHead">Name</td>
+                        <td class="tableItem">
+                            <%= r.name %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">Color</td>
+                        <td class="tableItem">
+                            <%= r.color %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">Width</td>
+                        <td class="tableItem">
+                            <%= r.width %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">Height</td>
+                        <td class="tableItem">
+                            <%= r.height %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">ID</td>
+                        <td class="tableItem">
+                            <%= r.id %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">Border Color</td>
+                        <td class="tableItem">
+                            <%= r.bordercolor %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">Owner</td>
+                        <td class="tableItem">
+                            <%= r.owner %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableHead">Gradient</td>
+                        <td class="tableItem">
+                            <%= r.gradient %>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <form action="/updateItem/<%= r.id%>" method="post" class="updateItemForm">
+                    <h3 class="formTitle">Update Rectangle</h3>
+                    <fieldset>
+                        <label for="name">Name:</label>
+                        <br>
+                        <input type="text" name="name">
+                        <br>
+                        <label for="color">Color:</label>
+                        <br>
+                        <input type="color" name="color">
+                        <input type="checkbox" name="keepcolorsame">
+                        <label>Change color?</label>
+                        <br>
+                        <label for="width">Width:</label>
+                        <br>
+                        <input type="number" name="width">
+                        <br>
+                        <label for="height">Height:</label>
+                        <br>
+                        <input type="number" name="height">
+                        <br>
+                        <label for="bordercolor">Border Color:</label>
+                        <br>
+                        <input type="color" name="bordercolor">
+                        <input type="checkbox" name="keepbordersame">
+                        <label>Change color?</label>
+                        <br>
+                        <label for="owner">Owner:</label>
+                        <br>
+                        <input type="text" name="owner">
+                        <br>
+                        <label for="gradient">Gradient*:</label>
+                        <br>
+                        <input type="radio" name="gradient" value="True">
+                        <label>Yes</label>
+                        <input type="radio" name="gradient" value="False">
+                        <label>No</label>
+                        <br>
+                        <button class="updateButton" type="submit">Enter</button>
+                        <br>
+                        <label>*Gradient Automatically Set to Border Color</label>
+
+                    </fieldset>
+                </form>
+
+            </section>
+            <% }); %>
+
+    </main>
+
+</body>
+
+</html>

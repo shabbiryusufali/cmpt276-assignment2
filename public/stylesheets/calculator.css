@@ -1,0 +1,123 @@
+/*
+Author: Shabbir Yusufali
+Date: January 30, 2021
+Description: This document contains the CSS for the calculator.html
+file. It styles the page to closely resemble the provided image that we
+had to copy from.
+Citations:
+- Used a tool to extract RGB values from the image provided (ColorZilla)
+- Nothing referenced outside of provided resources
+*/
+
+body {
+    background-color: rgb(166, 25, 45);
+}
+
+header,
+footer {
+    background-color: rgb(61, 57, 53);
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+h1 {
+    margin-left: 30px;
+    font-family: arial;
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(189, 52, 59);
+}
+
+h3 {
+    font-weight: bold;
+    color: rgb(189, 52, 59);
+}
+
+#mainContent {
+    background-color: rgb(233, 239, 241);
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+#addActivity {
+    color: white;
+    background-color: rgb(181, 17, 25);
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#buttonRight button {
+    color: white;
+    background-color: rgb(181, 17, 25);
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#buttonRight {
+    float: right;
+    margin-right: 10px;
+}
+
+#addActivity:hover {
+    background-color: rgb(170, 17, 25);
+}
+
+#buttonRight button:hover {
+    background-color: rgb(170, 17, 25);
+}
+
+#addActivity:active {
+    background-color: rgb(153, 16, 23);
+}
+
+#buttonRight button:active {
+    background-color: rgb(153, 16, 23);
+}
+
+table,
+tr,
+td,
+th {
+    border-collapse: collapse;
+    border: 1px solid rgb(148, 148, 148);
+    padding-left: 1%;
+}
+
+#topRowTable {
+    background-color: rgb(221, 221, 221);
+    font-weight: bold;
+}
+
+#calculatorDesign td,
+th {
+    width: 20%;
+}
+
+#calculatorDesign input {
+    width: 20%;
+    padding: 5px;
+    margin: 5px;
+}
+
+#result {
+    font-weight: bold;
+    color: rgb(189, 52, 59);
+}
