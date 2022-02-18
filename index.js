@@ -1,3 +1,9 @@
+/*
+ I used http://expressjs.com/en/resources/middleware/body-parser.html for the 
+ bodyParser for Assignment 2. Aside from that I referenced class content ( YT videos)
+ and the Heroku Getting Started Tutorial. for the ejs files I references W3Schools for
+ a few elements such as input and label
+*/
 const cool = require('cool-ascii-faces');
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
